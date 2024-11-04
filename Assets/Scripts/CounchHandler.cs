@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CounchHandler : MonoBehaviour
 {
-    [SerializeField] private FixedJoystick fixedJoystick;  
+    private FixedJoystick fixedJoystick;  
     [SerializeField] private float rotationSpeed;   
     [SerializeField] private Button resetButton;           
 
@@ -17,6 +17,7 @@ public class CounchHandler : MonoBehaviour
         originalRotation = transform.rotation;
 
         resetButton.onClick.AddListener(ResetRotation);
+        fixedJoystick = FindObjectOfType<FixedJoystick>();
     }
 
 
